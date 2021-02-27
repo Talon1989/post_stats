@@ -21,7 +21,8 @@ class K_nearest:
     @staticmethod
     def distance(arr_1: np.array, matrix: np.array):
         assert arr_1.shape[0] == matrix.shape[1]
-        return np.sum((arr_1 - matrix) ** 2, axis=1)
+        # return np.sum((arr_1 - matrix) ** 2, axis=1)
+        return np.sum(np.abs(arr_1 - matrix), axis=1)
 
     def fit(self, datapoint: np.array, dataset: np.array):
         """
@@ -34,7 +35,7 @@ class K_nearest:
 
 
 datapoint_ = X_[84]
-k = K_nearest()
+k = K_nearest(10)
 closest = k.fit(datapoint_, X_)
 print(y_[closest])
 
