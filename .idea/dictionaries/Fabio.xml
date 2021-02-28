@@ -8,6 +8,7 @@
       <w>onehot</w>
       <w>perc</w>
       <w>perceptron</w>
+      <w>proba</w>
     </words>
   </dictionary>
 </component>
